@@ -27,5 +27,10 @@
 	"simple-tasks-taskreport-state-title-open": "Task is open",
 	"simple-tasks-taskreport-state-title-done": "Task is done",
 	"simple-tasks-taskreport-state-filter-done": "Done",
-	"simple-tasks-taskreport-state-filter-open": "Open"
+	"simple-tasks-taskreport-state-filter-open": "Open",
+	"echo-category-title-simple-tasks-notification-cat": "Tasks",
+	"simple-tasks-notification-cat-tooltip": "Notify me when tasks are assigned to me",
+	"simple-tasks-echo-notification-task-subject": "Task assigned to you on page $1",
+	"simple-tasks-echo-notification-task-email-body": "{{GENDER:$2|$3 assigned}} a task to you on page $1.\n\n$4",
+	"simple-tasks-echo-notification-task-web-body": "{{GENDER:$1|$2 assigned}} a task to you: $3"
 }
