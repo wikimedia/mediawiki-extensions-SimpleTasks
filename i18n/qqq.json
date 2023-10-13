@@ -28,5 +28,10 @@
 	"simple-tasks-taskreport-state-title-open": "Title for status label open",
 	"simple-tasks-taskreport-state-title-done": "Title for status label done",
 	"simple-tasks-taskreport-state-filter-done": "Label for status filter with value done",
-	"simple-tasks-taskreport-state-filter-open": "Label for status filter with value open"
+	"simple-tasks-taskreport-state-filter-open": "Label for status filter with value open",
+	"echo-category-title-simple-tasks-notification-cat": "Echo notification category preference label",
+	"simple-tasks-notification-cat-tooltip": "Echo notification category preference tooltip",
+	"simple-tasks-echo-notification-task-subject": "Notification summary and email subject",
+	"simple-tasks-echo-notification-task-email-body": "Notification email body.\n$1 - page title\n$2 - agent\n$3 - agent real name\n$4 - task description",
+	"simple-tasks-echo-notification-task-web-body": "Web notification body.\n$1 - page title\n$2 - agent\n$3 - task description"
 }
