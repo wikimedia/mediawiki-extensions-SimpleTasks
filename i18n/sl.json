@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"simple-tasks-desc": "Ustvarjanje opravil za uporabnike",
+	"simple-tasks-task-duedate": "Rok: $1",
+	"simple-tasks-task-desc": "Opravilo, ustvarjeno v vsebini strani",
+	"simple-tasks-notif-key": "Dodelitev opravila",
+	"simple-tasks-notif-message": "vam je dodelil opravilo: »$1«",
+	"simple-tasks-taskreport-no-results": "Ob izbranih filtrih ni bilo najdenih opravil",
+	"simple-tasks-taskreport-header-task": "Opravilo",
+	"simple-tasks-taskreport-header-assignee": "Prejemnik",
+	"simple-tasks-taskreport-header-page": "Pojavi se na strani",
+	"simple-tasks-taskreport-header-due-to": "Rok",
+	"simple-tasks-taskreport-header-state": "Stanje",
+	"simple-tasks-droplet-taskreport-name": "Poročilo o opravilu",
+	"simple-tasks-droplet-taskreport-description": "Ustvari pregled opravil",
+	"simple-tasks-taskreport-inspector-title": "Poročilo o opravilu",
+	"simple-tasks-taskreport-inspector-state-done": "opravljeno",
+	"simple-tasks-taskreport-inspector-state-open": "odprto",
+	"simple-tasks-taskreport-inspector-label-user": "Prejemniki",
+	"simple-tasks-taskreport-inspector-label-namespaces": "Imenski prostori",
+	"simple-tasks-taskreport-inspector-label-due-date": "Rok do",
+	"simple-tasks-taskreport-inspector-label-state": "Stanje",
+	"simple-tasks-taskreport-state-title-open": "Opravilo je odprto",
+	"simple-tasks-taskreport-state-title-done": "Opravilo je opravljeno.",
+	"simple-tasks-taskreport-state-filter-done": "Opravljeno",
+	"simple-tasks-taskreport-state-filter-open": "Odprto"
+}
