@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ukhant Erdemt"
+			"Ukhant Erdemt",
+			"Алия"
 		]
 	},
-	"simple-tasks-desc": "Керглчнрт зөрүлсн даалһвр үүскх",
+	"simple-tasks-desc": "Кергләчнрт зөрүлсн даалһвр үүскх",
 	"simple-tasks-task-duedate": "Эцсин хуһцан: $1",
 	"simple-tasks-task-desc": "Халхин аһулһд үүсксн даллһвр",
 	"simple-tasks-notif-key": "Даалһвр даалһх",
