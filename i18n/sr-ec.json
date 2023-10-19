@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Milicevic01"
+		]
+	},
+	"simple-tasks-task-duedate": "Крајњи рок: $1",
+	"simple-tasks-taskreport-header-task": "Задатак",
+	"simple-tasks-taskreport-header-assignee": "Додељено",
+	"simple-tasks-taskreport-header-due-to": "Крајњи рок",
+	"simple-tasks-taskreport-inspector-state-done": "урађено",
+	"simple-tasks-taskreport-inspector-state-open": "отворено",
+	"simple-tasks-taskreport-inspector-label-namespaces": "Именски простори",
+	"simple-tasks-taskreport-state-filter-done": "Урађено",
+	"simple-tasks-taskreport-state-filter-open": "Отворено"
+}
