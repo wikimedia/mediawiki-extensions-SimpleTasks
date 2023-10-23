@@ -7,5 +7,6 @@
 	"simple-tasks-taskreport-header-task": "কার্য",
 	"simple-tasks-taskreport-header-state": "স্থিতি",
 	"simple-tasks-taskreport-inspector-state-done": "সম্পন্ন",
-	"simple-tasks-taskreport-inspector-label-namespaces": "নামস্থান"
+	"simple-tasks-taskreport-inspector-label-namespaces": "নামস্থান",
+	"simple-tasks-taskreport-inspector-label-state": "স্থিতি"
 }

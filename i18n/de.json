@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Cupkake4Yoshi",
 			"Miriam Schlindwein"
 		]
 	},
@@ -16,7 +17,7 @@
 	"simple-tasks-taskreport-header-due-to": "Fälligkeitsdatum",
 	"simple-tasks-taskreport-header-state": "Status",
 	"simple-tasks-droplet-taskreport-name": "Aufgabenbericht",
-	"simple-tasks-droplet-taskreport-description": "Erzeugt eine Übersicht über Aufgaben",
+	"simple-tasks-droplet-taskreport-description": "Erzeugt eine Übersicht von Aufgaben",
 	"simple-tasks-taskreport-inspector-title": "Aufgabenbericht",
 	"simple-tasks-taskreport-inspector-state-done": "erledigt",
 	"simple-tasks-taskreport-inspector-state-open": "offen",
