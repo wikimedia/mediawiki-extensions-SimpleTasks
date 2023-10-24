@@ -139,8 +139,8 @@ class RetrieveTasksFromFilter extends Handler {
 	 * @return array
 	 */
 	private function setUserData( $task ) {
-		$userID = $task['assignee'];
-		$user = $this->userFactory->newFromId( $userID );
+		$userName = $task['assignee'];
+		$user = $this->userFactory->newFromName( $userName );
 		$task['assignee'] = $user->getName();
 		return $task;
 	}

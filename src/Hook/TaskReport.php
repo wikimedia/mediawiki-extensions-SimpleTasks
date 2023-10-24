@@ -31,13 +31,13 @@ class TaskReport implements ParserFirstCallInitHook {
 	}
 
 	/**
-	 * @param string $input
+	 * @param string|null $input
 	 * @param array $args
 	 * @param Parser $parser
 	 * @param PPFrame $frame
 	 * @return string
 	 */
-	public function onTaskReport( string $input, array $args, Parser $parser,
+	public function onTaskReport( ?string $input, array $args, Parser $parser,
 		PPFrame $frame ) {
 		if ( isset( static::$counter[spl_object_id( $parser )] ) ) {
 			static::$counter[spl_object_id( $parser )]++;

@@ -221,7 +221,7 @@ class SimpleTaskManager {
 			$tasks[] = new SimpleTask(
 				$check,
 				$row->st_text,
-				$this->userFactory->newFromId( $row->st_user ),
+				$this->userFactory->newFromId( intval( $row->st_user ) ),
 				$dueDate ?: null,
 			);
 		}
