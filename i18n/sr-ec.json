@@ -11,6 +11,7 @@
 	"simple-tasks-taskreport-inspector-state-done": "урађено",
 	"simple-tasks-taskreport-inspector-state-open": "отворено",
 	"simple-tasks-taskreport-inspector-label-namespaces": "Именски простори",
+	"simple-tasks-taskreport-state-title-done": "Задатак урађен",
 	"simple-tasks-taskreport-state-filter-done": "Урађено",
 	"simple-tasks-taskreport-state-filter-open": "Отворено"
 }
