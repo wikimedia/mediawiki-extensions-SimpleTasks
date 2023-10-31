@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rulebased"
+		]
+	},
+	"simple-tasks-task-duedate": "تاریخ سررسید: $1",
+	"simple-tasks-taskreport-inspector-state-done": "انجام شد",
+	"simple-tasks-taskreport-inspector-label-state": "وضعیت",
+	"simple-tasks-taskreport-state-title-done": "وظیفه انجام شده است",
+	"simple-tasks-taskreport-state-filter-open": "گشودن"
+}
