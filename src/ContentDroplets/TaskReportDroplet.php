@@ -39,7 +39,7 @@ class TaskReportDroplet extends TagDroplet {
 	 * @return array
 	 */
 	public function getCategories(): array {
-		return [ 'content', 'lists' ];
+		return [ 'content', 'lists', 'featured' ];
 	}
 
 	/**
