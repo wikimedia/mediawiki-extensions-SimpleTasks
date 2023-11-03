@@ -319,7 +319,7 @@ class RetrieveTasksFromFilter extends Handler {
 				self::PARAM_SOURCE => 'path',
 				ParamValidator::PARAM_TYPE => 'string',
 				ParamValidator::PARAM_REQUIRED => true,
-				ParamValidator::PARAM_DEFAULT => '',
+				ParamValidator::PARAM_DEFAULT => '0',
 			],
 			'user' => [
 				static::PARAM_SOURCE => 'query',
