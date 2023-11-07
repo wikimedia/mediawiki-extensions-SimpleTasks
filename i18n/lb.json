@@ -12,5 +12,6 @@
 	"simple-tasks-taskreport-inspector-label-namespaces": "Nummraim",
 	"simple-tasks-taskreport-inspector-label-state": "Status",
 	"simple-tasks-taskreport-state-title-done": "Aufgab ass fäerdeg",
-	"simple-tasks-taskreport-state-filter-done": "Fäerdeg"
+	"simple-tasks-taskreport-state-filter-done": "Fäerdeg",
+	"echo-category-title-simple-tasks-notification-cat": "Aufgaben"
 }
