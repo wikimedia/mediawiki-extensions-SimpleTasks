@@ -36,6 +36,9 @@ class RetrieveTasksFromFilter extends Handler {
 	/** @var User */
 	private $currentUser = null;
 
+	/** @var Language */
+	private $userlanguage = null;
+
 	/**
 	 * @param SimpleTaskManager $taskManager
 	 * @param UserFactory $userFactory
@@ -67,7 +70,9 @@ class RetrieveTasksFromFilter extends Handler {
 		$states = $this->getStates();
 		$date = $this->getDate();
 		$namespaces = $this->getNamespaces();
-		$this->currentUser = RequestContext::getMain()->getUser();
+		$context = RequestContext::getMain();
+		$this->currentUser = $context->getUser();
+		$this->userlanguage = $context->getLanguage();
 
 		$rawTasks = $this->getTasksFromFilter( $user, $states, $date, $namespaces );
 		$tasks = $this->getTasks( $rawTasks );
@@ -128,7 +133,7 @@ class RetrieveTasksFromFilter extends Handler {
 	 */
 	private function setDateData( $task ) {
 		$date = $task['dueDate'];
-		$dateFormatted = $this->language->userDate( $date, $this->currentUser );
+		$dateFormatted = $this->userlanguage->userDate( $date, $this->currentUser );
 		$task['dueDate'] = $dateFormatted;
 		return $task;
 	}
