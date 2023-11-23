@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Rulebased",
-			"Jeeputer"
+			"Jeeputer",
+			"Rulebased"
 		]
 	},
 	"simple-tasks-task-duedate": "تاریخ سررسید: $1",
