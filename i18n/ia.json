@@ -27,5 +27,10 @@
 	"simple-tasks-taskreport-state-title-open": "Carga es aperte",
 	"simple-tasks-taskreport-state-title-done": "Carga es facite",
 	"simple-tasks-taskreport-state-filter-done": "Facite",
-	"simple-tasks-taskreport-state-filter-open": "Aperte"
+	"simple-tasks-taskreport-state-filter-open": "Aperte",
+	"echo-category-title-simple-tasks-notification-cat": "Cargas",
+	"simple-tasks-notification-cat-tooltip": "Notificar me quando cargas es assignate a me",
+	"simple-tasks-echo-notification-task-subject": "Cargas assignate a te sur le pagina $1",
+	"simple-tasks-echo-notification-task-email-body": "{{GENDER:$2|$3 te ha assignate}} un carga sur le pagina $1.\n\n$4",
+	"simple-tasks-echo-notification-task-web-body": "{{GENDER:$1|$2 te ha assignate}} un carga: $3"
 }

@@ -12,5 +12,9 @@
 	"simple-tasks-taskreport-inspector-label-namespaces": "Nummraim",
 	"simple-tasks-taskreport-inspector-label-state": "Status",
 	"simple-tasks-taskreport-state-title-done": "Aufgab ass fäerdeg",
-	"simple-tasks-taskreport-state-filter-done": "Fäerdeg"
+	"simple-tasks-taskreport-state-filter-done": "Fäerdeg",
+	"simple-tasks-task-duedate": "Fällegkeetsdatum: $1",
+	"simple-tasks-taskreport-header-due-to": "Fällegkeetsdatum",
+	"simple-tasks-taskreport-inspector-label-due-date": "Fälleg bis",
+	"echo-category-title-simple-tasks-notification-cat": "Aufgaben"
 }
