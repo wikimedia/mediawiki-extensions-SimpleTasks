@@ -24,11 +24,13 @@ class AddSemanticSubobject {
 		}
 
 		$title = $subject->getTitle();
-		$wikiPage = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $title );
+		$services = MediaWikiServices::getInstance();
+		$titleFactory = $services->getTitleFactory();
+		$wikiPage = $services->getWikiPageFactory()->newFromTitle( $title );
 		$dataValueFactory = DataValueFactory::getInstance();
 
 		/** @var SimpleTaskManager */
-		$simpleTaskManagerService = MediaWikiServices::getInstance()->getService( 'SimpleTaskManager' );
+		$simpleTaskManagerService = $services->getService( 'SimpleTaskManager' );
 		$simpleTaskManager = $simpleTaskManagerService->forTitle( $wikiPage->getTitle() );
 		$simpleTasks = $simpleTaskManager->query();
 
@@ -51,9 +53,10 @@ class AddSemanticSubobject {
 				'Task/Desc',
 				$desc
 			);
+			$userTitle = $titleFactory->newFromText( $userName, NS_USER );
 			$userValue = $dataValueFactory->newDataValueByText(
 				'Task/User',
-				$userName
+				$userTitle->getFullText()
 			);
 			if ( $dueDate ) {
 				$dueDateValue = $dataValueFactory->newDataValueByText(
