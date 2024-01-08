@@ -10,9 +10,9 @@
 	"requires": {
 		"MediaWiki": ">= 1.39.0",
 		"extensions": {
-			"Checklists": "*",
-			"AtMentions": "*",
-			"DateTimeTools": "*"
+			"Checklists": ">= 1.0.0",
+			"AtMentions": ">= 1.0.0",
+			"DateTimeTools": ">= 1.0.0"
 		}
 	},
 	"attributes": {
