@@ -44,6 +44,8 @@ class AddSemanticSubobject {
 			$dueDate = $dueDateObj ? $dueDateObj->format( 'Y-m-d' ) : '';
 			$desc = "$task for $userName";
 			$desc .= $dueDate ? " to be completed by $dueDate" : '';
+			$statusBool = $simpleTaskData['completed'];
+			$status = $statusBool ? 'done' : 'open';
 
 			$subobjectName = "SimpleTask_$id";
 			$subobject = new Subobject( $title );
@@ -64,12 +66,17 @@ class AddSemanticSubobject {
 					$dueDate
 				);
 			}
+			$statusValue = $dataValueFactory->newDataValueByText(
+				'Task/Status',
+				$status
+			);
 
 			$subobject->addDataValue( $descValue );
 			$subobject->addDataValue( $userValue );
 			if ( $dueDate ) {
 				$subobject->addDataValue( $dueDateValue );
 			}
+			$subobject->addDataValue( $statusValue );
 
 			$semanticData->addPropertyObjectValue(
 				$subobject->getProperty(),
