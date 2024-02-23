@@ -12,6 +12,5 @@
 		"jQuery": "readonly",
 		"OOJSPlus": "readonly"
 	},
-	"rules": {
-	}
+	"rules": {}
 }
