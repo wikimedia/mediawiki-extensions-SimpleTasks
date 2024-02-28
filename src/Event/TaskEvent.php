@@ -2,6 +2,7 @@
 
 namespace SimpleTasks\Event;
 
+use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
 use Message;
 use MWStake\MediaWiki\Component\Events\TitleEvent;
@@ -57,5 +58,14 @@ class TaskEvent extends TitleEvent {
 	 */
 	public function hasPriorityOver(): array {
 		return [ 'at-mentions-mention' ];
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public static function getArgsForTesting(
+		UserIdentity $agent, MediaWikiServices $services, array $extra = []
+	): array {
+		return [];
 	}
 }
