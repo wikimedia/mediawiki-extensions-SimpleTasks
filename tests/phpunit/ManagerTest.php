@@ -23,7 +23,7 @@ class ManagerTest extends TestCase {
 	 * @param array|null $expected
 	 *
 	 * @dataProvider provideData
-	 * @covers SimpleTaskManager::processTask
+	 * @covers \SimpleTasks\SimpleTaskManager::processTask
 	 *
 	 * @return void
 	 */
