@@ -317,7 +317,7 @@ class SimpleTaskManager {
 			$this->delete( $old->getChecklistItem()->getId() );
 			return $this->insert( $new );
 		}
-		$dbw = $this->loadBalancer->getConnectionRef( DB_PRIMARY );
+		$dbw = $this->loadBalancer->getConnection( DB_PRIMARY );
 		return $dbw->update(
 			'simple_tasks',
 			[
@@ -336,7 +336,7 @@ class SimpleTaskManager {
 	 * @return bool
 	 */
 	private function insert( SimpleTask $task ): bool {
-		$dbw = $this->loadBalancer->getConnectionRef( DB_PRIMARY );
+		$dbw = $this->loadBalancer->getConnection( DB_PRIMARY );
 		return $dbw->insert(
 			'simple_tasks',
 			[
@@ -356,7 +356,7 @@ class SimpleTaskManager {
 	 * @return bool
 	 */
 	public function delete( string $id ): bool {
-		$dbw = $this->loadBalancer->getConnectionRef( DB_PRIMARY );
+		$dbw = $this->loadBalancer->getConnection( DB_PRIMARY );
 		return $dbw->delete(
 			'simple_tasks',
 			[ 'st_check_id' => $id ],
@@ -368,7 +368,7 @@ class SimpleTaskManager {
 	 * @return bool
 	 */
 	private function truncate(): bool {
-		$dbw = $this->loadBalancer->getConnectionRef( DB_PRIMARY );
+		$dbw = $this->loadBalancer->getConnection( DB_PRIMARY );
 		return $dbw->delete(
 			'simple_tasks',
 			'*',
