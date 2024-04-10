@@ -13,6 +13,12 @@ class RunDatabaseUpdates implements LoadExtensionSchemaUpdatesHook {
 	 * @return bool|void
 	 */
 	public function onLoadExtensionSchemaUpdates( $updater ) {
-		$updater->addExtensionTable( 'simple_tasks', __DIR__ . '/../../db/simple_tasks.sql' );
+		$dbType = $updater->getDB()->getType();
+		$dir = dirname( __DIR__, 2 );
+
+		$updater->addExtensionTable(
+			'simple_tasks',
+			"$dir/db/$dbType/simple_tasks.sql"
+		);
 	}
 }
