@@ -5,6 +5,7 @@ namespace SimpleTasks\Event;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
 use Message;
+use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\TitleEvent;
 use SimpleTasks\SimpleTask;
 
@@ -47,7 +48,7 @@ class TaskEvent extends TitleEvent {
 	/**
 	 * @inheritDoc
 	 */
-	public function getMessage(): Message {
+	public function getMessage( IChannel $forChannel ): Message {
 		return Message::newFromKey( 'simple-tasks-notif-message' )->params(
 			$this->text
 		);
