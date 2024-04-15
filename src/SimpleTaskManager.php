@@ -10,10 +10,8 @@ use MediaWiki\Extension\Checklists\ChecklistManager;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use MWStake\MediaWiki\Component\Events\Notifier;
-use MWStake\MediaWiki\Component\Notifications\INotifier;
 use RefreshTasks;
 use SimpleTasks\Event\TaskEvent;
-use SimpleTasks\Notifications\TaskNotification;
 use Title;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\ILoadBalancer;
@@ -38,9 +36,6 @@ class SimpleTaskManager {
 	/** @var Notifier */
 	private $notifier;
 
-	/** @var INotifier */
-	private $echoNotifier;
-
 	/** @var array */
 	private $userCondition = [];
 
@@ -60,11 +55,10 @@ class SimpleTaskManager {
 	 * @param MentionParser $mentionParser
 	 * @param DateTimeParser $dateTimeParser
 	 * @param Notifier $notifier
-	 * @param INotifier $echoNotifier
 	 */
 	public function __construct(
 		ILoadBalancer $loadBalancer, ChecklistManager $checklistManager, UserFactory $userFactory,
-		MentionParser $mentionParser, DateTimeParser $dateTimeParser, Notifier $notifier, INotifier $echoNotifier
+		MentionParser $mentionParser, DateTimeParser $dateTimeParser, Notifier $notifier
 	) {
 		$this->loadBalancer = $loadBalancer;
 		$this->checklistManager = $checklistManager;
@@ -72,7 +66,6 @@ class SimpleTaskManager {
 		$this->mentionParser = $mentionParser;
 		$this->dateTimeParser = $dateTimeParser;
 		$this->notifier = $notifier;
-		$this->echoNotifier = $echoNotifier;
 	}
 
 	/**
