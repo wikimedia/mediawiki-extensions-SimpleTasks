@@ -27,10 +27,5 @@
 	"simple-tasks-taskreport-state-title-open": "任務已開放",
 	"simple-tasks-taskreport-state-title-done": "任務已完成",
 	"simple-tasks-taskreport-state-filter-done": "完成",
-	"simple-tasks-taskreport-state-filter-open": "開放",
-	"echo-category-title-simple-tasks-notification-cat": "任務",
-	"simple-tasks-notification-cat-tooltip": "當有任務分配給我時通知我",
-	"simple-tasks-echo-notification-task-subject": "在$1頁面分配給您的任務",
-	"simple-tasks-echo-notification-task-email-body": "{{GENDER:$2|$3}}在頁面$1分配了一個任務給您。\n\n$4",
-	"simple-tasks-echo-notification-task-web-body": "{{GENDER:$1|$2已分配}}一個任務給您：$3"
+	"simple-tasks-taskreport-state-filter-open": "開放"
 }
