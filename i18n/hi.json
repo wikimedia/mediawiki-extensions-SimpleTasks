@@ -4,13 +4,13 @@
 			"Abijeet Patro"
 		]
 	},
-	"simple-tasks-taskreport-header-task": "कार्य",
-	"simple-tasks-taskreport-header-state": "स्थिति",
-	"simple-tasks-taskreport-inspector-state-done": "हो गया",
-	"simple-tasks-taskreport-inspector-state-open": "खोलें",
-	"simple-tasks-taskreport-inspector-label-namespaces": "नामस्थान",
-	"simple-tasks-taskreport-inspector-label-state": "स्थिति",
-	"simple-tasks-taskreport-state-filter-done": "पूर्ण हुआ",
-	"simple-tasks-taskreport-state-filter-open": "खोलें",
-	"echo-category-title-simple-tasks-notification-cat": "कार्य"
+	"simple-tasks-taskreport-header-task": "\u0915\u093e\u0930\u094d\u092f",
+	"simple-tasks-taskreport-header-state": "\u0938\u094d\u0925\u093f\u0924\u093f",
+	"simple-tasks-taskreport-inspector-state-done": "\u0939\u094b \u0917\u092f\u093e",
+	"simple-tasks-taskreport-inspector-state-open": "\u0916\u094b\u0932\u0947\u0902",
+	"simple-tasks-taskreport-inspector-label-namespaces": "\u0928\u093e\u092e\u0938\u094d\u0925\u093e\u0928",
+	"simple-tasks-taskreport-inspector-label-state": "\u0938\u094d\u0925\u093f\u0924\u093f",
+	"simple-tasks-taskreport-state-filter-done": "\u092a\u0942\u0930\u094d\u0923 \u0939\u0941\u0906",
+	"simple-tasks-taskreport-state-filter-open": "\u0916\u094b\u0932\u0947\u0902",
+	"echo-category-title-simple-tasks-notification-cat": "\u0915\u093e\u0930\u094d\u092f"
 }

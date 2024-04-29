@@ -4,11 +4,11 @@
 			"Saraiki"
 		]
 	},
-	"simple-tasks-taskreport-header-task": "کم",
-	"simple-tasks-taskreport-inspector-state-done": "تھی ڳیا",
-	"simple-tasks-taskreport-inspector-state-open": "کھولو",
-	"simple-tasks-taskreport-inspector-label-namespaces": "ناں جاہیں",
-	"simple-tasks-taskreport-state-filter-done": "تھی ڳیا",
-	"simple-tasks-taskreport-state-filter-open": "کھولو",
-	"simple-tasks-taskreport-inspector-label-state": "حالت"
+	"simple-tasks-taskreport-header-task": "\u06a9\u0645",
+	"simple-tasks-taskreport-inspector-state-done": "\u062a\u06be\u06cc \u06b3\u06cc\u0627",
+	"simple-tasks-taskreport-inspector-state-open": "\u06a9\u06be\u0648\u0644\u0648",
+	"simple-tasks-taskreport-inspector-label-namespaces": "\u0646\u0627\u06ba \u062c\u0627\u06c1\u06cc\u06ba",
+	"simple-tasks-taskreport-state-filter-done": "\u062a\u06be\u06cc \u06b3\u06cc\u0627",
+	"simple-tasks-taskreport-state-filter-open": "\u06a9\u06be\u0648\u0644\u0648",
+	"simple-tasks-taskreport-inspector-label-state": "\u062d\u0627\u0644\u062a"
 }

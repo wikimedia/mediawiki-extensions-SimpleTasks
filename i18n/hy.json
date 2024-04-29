@@ -4,9 +4,9 @@
 			"Kareyac"
 		]
 	},
-	"simple-tasks-taskreport-header-state": "Կարգավիճակ",
-	"simple-tasks-taskreport-inspector-state-done": "արված է",
-	"simple-tasks-taskreport-inspector-label-namespaces": "Անվանատարածքներ",
-	"simple-tasks-taskreport-state-filter-done": "Արված է",
-	"simple-tasks-taskreport-inspector-label-state": "Կարգավիճակ"
+	"simple-tasks-taskreport-header-state": "\u053f\u0561\u0580\u0563\u0561\u057e\u056b\u0573\u0561\u056f",
+	"simple-tasks-taskreport-inspector-state-done": "\u0561\u0580\u057e\u0561\u056e \u0567",
+	"simple-tasks-taskreport-inspector-label-namespaces": "\u0531\u0576\u057e\u0561\u0576\u0561\u057f\u0561\u0580\u0561\u056e\u0584\u0576\u0565\u0580",
+	"simple-tasks-taskreport-state-filter-done": "\u0531\u0580\u057e\u0561\u056e \u0567",
+	"simple-tasks-taskreport-inspector-label-state": "\u053f\u0561\u0580\u0563\u0561\u057e\u056b\u0573\u0561\u056f"
 }
