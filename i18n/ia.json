@@ -8,7 +8,7 @@
 	"simple-tasks-task-duedate": "Data limite: $1",
 	"simple-tasks-task-desc": "Carga create in contento de pagina",
 	"simple-tasks-notif-key": "Assignation de carga",
-	"simple-tasks-notif-message": "te ha assignate un carga: “$1”",
+	"simple-tasks-notif-message": "{{GENDER:$1|te ha assignate}} un carga: \u201c$2\u201d",
 	"simple-tasks-taskreport-no-results": "Nulle cargas trovate con filtros seligite",
 	"simple-tasks-taskreport-header-task": "Carga",
 	"simple-tasks-taskreport-header-assignee": "Assignato",
