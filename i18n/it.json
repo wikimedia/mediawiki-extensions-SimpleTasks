@@ -5,13 +5,13 @@
 		]
 	},
 	"simple-tasks-task-duedate": "Data di scadenza: $1",
-	"simple-tasks-taskreport-header-task": "Attivit\u00e0",
+	"simple-tasks-taskreport-header-task": "Attività",
 	"simple-tasks-taskreport-header-due-to": "Scadenza",
 	"simple-tasks-taskreport-header-state": "Stato",
 	"simple-tasks-taskreport-inspector-state-done": "fatto",
 	"simple-tasks-taskreport-inspector-label-namespaces": "Namespace",
 	"simple-tasks-taskreport-inspector-label-state": "Stato",
-	"simple-tasks-taskreport-state-title-open": "L'attivit\u00e0 \u00e8 aperta",
-	"echo-category-title-simple-tasks-notification-cat": "Attivit\u00e0",
-	"simple-tasks-notification-cat-tooltip": "Avvisami quando mi vengono assegnate attivit\u00e0"
+	"simple-tasks-taskreport-state-title-open": "L'attività è aperta",
+	"echo-category-title-simple-tasks-notification-cat": "Attività",
+	"simple-tasks-notification-cat-tooltip": "Avvisami quando mi vengono assegnate attività"
 }

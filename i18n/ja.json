@@ -5,7 +5,7 @@
 			"MathXplore"
 		]
 	},
-	"simple-tasks-taskreport-header-due-to": "\u671f\u65e5",
-	"simple-tasks-taskreport-inspector-label-namespaces": "\u540d\u524d\u7a7a\u9593",
-	"simple-tasks-taskreport-header-task": "\u30bf\u30b9\u30af"
+	"simple-tasks-taskreport-header-due-to": "期日",
+	"simple-tasks-taskreport-inspector-label-namespaces": "名前空間",
+	"simple-tasks-taskreport-header-task": "タスク"
 }
