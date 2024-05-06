@@ -9,7 +9,7 @@
 	"simple-tasks-task-duedate": "Opleverdatum: $1",
 	"simple-tasks-task-desc": "Taak gemaakt in pagina-inhoud",
 	"simple-tasks-notif-key": "Taaktoewijzing",
-	"simple-tasks-notif-message": "een taak toegewezen aan u: \"$1\"",
+	"simple-tasks-notif-message": "{{GENDER:$1|heeft}} u een taak toegewezen: “$1”",
 	"simple-tasks-taskreport-no-results": "Er zijn geen taken gevonden op basis van de gekozen filters",
 	"simple-tasks-taskreport-header-task": "Taak",
 	"simple-tasks-taskreport-header-assignee": "Toegewezen aan",
@@ -28,10 +28,5 @@
 	"simple-tasks-taskreport-state-title-open": "Taak is geopend",
 	"simple-tasks-taskreport-state-title-done": "Taak is afgerond",
 	"simple-tasks-taskreport-state-filter-done": "Afgerond",
-	"simple-tasks-taskreport-state-filter-open": "Open",
-	"echo-category-title-simple-tasks-notification-cat": "Taken",
-	"simple-tasks-notification-cat-tooltip": "Melding sturen als taken aan mij toegewezen zijn",
-	"simple-tasks-echo-notification-task-subject": "Taak aan u toegewezen op pagina $1",
-	"simple-tasks-echo-notification-task-email-body": "{{GENDER:$2| $3 wees}} een taak aan u toe op pagina $1.\n\n $4",
-	"simple-tasks-echo-notification-task-web-body": "{{GENDER:$1| $2 wees}} een taak aan u toe: $3"
+	"simple-tasks-taskreport-state-filter-open": "Open"
 }
