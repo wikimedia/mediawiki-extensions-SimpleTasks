@@ -283,9 +283,6 @@ class SimpleTaskManager {
 		// Notifications
 		$taskNotification = new TaskEvent( $task );
 		$this->notifier->emit( $taskNotification );
-
-		// Echo
-		$this->echoNotifier->notify( new TaskNotification( $task ) );
 	}
 
 	/**
