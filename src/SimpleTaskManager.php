@@ -4,9 +4,9 @@ namespace SimpleTasks;
 
 use AtMentions\MentionParser;
 use DateTime;
-use DateTimeTools\DateTimeParser;
 use MediaWiki\Extension\Checklists\ChecklistItem;
 use MediaWiki\Extension\Checklists\ChecklistManager;
+use MediaWiki\Extension\DateTimeTools\DateTimeParser;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use MWStake\MediaWiki\Component\Events\Notifier;
