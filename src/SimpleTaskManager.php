@@ -194,6 +194,9 @@ class SimpleTaskManager {
 	 * @return array
 	 */
 	public function query( ?array $conds = [] ): array {
+		if ( !$this->isInitialized() ) {
+			return [];
+		}
 		$db = $this->loadBalancer->getConnection( ILoadBalancer::DB_REPLICA );
 		$this->formatConditions( $db );
 		$conds = array_merge( $conds, $this->conds );
@@ -234,6 +237,9 @@ class SimpleTaskManager {
 	 * @return bool
 	 */
 	public function persist( SimpleTask $task ): bool {
+		if ( !$this->isInitialized() ) {
+			return true;
+		}
 		$existing = $this->id( $task->getChecklistItem()->getId() )->query();
 		if ( empty( $existing ) ) {
 			$res = $this->insert( $task );
@@ -254,6 +260,9 @@ class SimpleTaskManager {
 	 * @return void
 	 */
 	public function refreshAll( ?RefreshTasks $maintenance ) {
+		if ( !$this->isInitialized() ) {
+			return;
+		}
 		if ( $maintenance ) {
 			$maintenance->outputText( "Refreshing all simple tasks...\n" );
 		}
@@ -283,9 +292,6 @@ class SimpleTaskManager {
 		// Notifications
 		$taskNotification = new TaskEvent( $task );
 		$this->notifier->emit( $taskNotification );
-
-		// Echo
-		$this->echoNotifier->notify( new TaskNotification( $task ) );
 	}
 
 	/**
@@ -349,6 +355,9 @@ class SimpleTaskManager {
 	 * @return bool
 	 */
 	public function delete( string $id ): bool {
+		if ( !$this->isInitialized() ) {
+			return true;
+		}
 		$dbw = $this->loadBalancer->getConnection( DB_PRIMARY );
 		return $dbw->delete(
 			'simple_tasks',
@@ -406,5 +415,12 @@ class SimpleTaskManager {
 		// Trim and remove any double spaces
 		$text = trim( $text );
 		$text = preg_replace( '/\s+/', ' ', $text );
+	}
+
+	/**
+	 * @return bool
+	 */
+	private function isInitialized(): bool {
+		return !defined( 'MEDIAWIKI_INSTALL' ) && !defined( 'MW_UPDATER' );
 	}
 }
