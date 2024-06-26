@@ -10,11 +10,9 @@ use MediaWiki\Extension\DateTimeTools\DateTimeParser;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use MWStake\MediaWiki\Component\Events\Notifier;
-use MWStake\MediaWiki\Component\Notifications\NullNotifier;
 use PHPUnit\Framework\TestCase;
 use SimpleTasks\SimpleTaskManager;
 use Wikimedia\Rdbms\ILoadBalancer;
-use Wikimedia\Rdbms\LBFactory;
 
 class ManagerTest extends TestCase {
 
@@ -34,8 +32,7 @@ class ManagerTest extends TestCase {
 			$this->getUserFactoryMock(),
 			$this->getMentionParserMock(),
 			$this->getDateTimeParserMock(),
-			new Notifier( [], $this->createMock( LBFactory::class ) ),
-			new NullNotifier
+			$this->createMock( Notifier::class )
 		);
 		$task = $manager->processTask( $checklistItem );
 		if ( $expected === null ) {
