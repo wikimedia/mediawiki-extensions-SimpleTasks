@@ -9,7 +9,7 @@
 	"simple-tasks-task-duedate": "Opleverdatum: $1",
 	"simple-tasks-task-desc": "Taak gemaakt in pagina-inhoud",
 	"simple-tasks-notif-key": "Taaktoewijzing",
-	"simple-tasks-notif-message": "een taak toegewezen aan u: \"$1\"",
+	"simple-tasks-notif-message": "{{GENDER:$1|heeft}} u een taak toegewezen: “$1”",
 	"simple-tasks-taskreport-no-results": "Er zijn geen taken gevonden op basis van de gekozen filters",
 	"simple-tasks-taskreport-header-task": "Taak",
 	"simple-tasks-taskreport-header-assignee": "Toegewezen aan",
