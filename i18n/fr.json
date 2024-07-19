@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"BlueCamille"
+			"BlueCamille",
+			"MacOS Weed"
 		]
 	},
-	"simple-tasks-notif-message": "vous a attribué une tâche: \"$1\"",
+	"simple-tasks-notif-message": "vous a {{GENDER:$1|}} attribué une tâche : « $1 »",
 	"simple-tasks-taskreport-no-results": "Aucune tâche trouvée avec les filtres sélectionnés",
 	"simple-tasks-taskreport-header-task": "Tâche",
 	"simple-tasks-taskreport-header-page": "Apparaît sur la page",
