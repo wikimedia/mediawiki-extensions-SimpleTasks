@@ -1,6 +1,3 @@
 {
-	"extends": "stylelint-config-wikimedia",
-	"rules": {
-		"stylistic/declaration-colon-space-after": null
-	}
+	"extends": "stylelint-config-wikimedia"
 }
