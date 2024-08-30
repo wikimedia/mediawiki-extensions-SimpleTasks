@@ -16,7 +16,7 @@
 		}
 	},
 	"attributes": {
-		"Notifications": {
+		"NotifyMe": {
 			"Events": {
 				"simple-tasks-task": {
 					"buckets": [ "personal" ]
@@ -128,9 +128,7 @@
 		"LoadExtensionSchemaUpdates": "runDatabaseUpdates",
 		"UnifiedTaskOverviewGetTaskDescriptors": "integrateIntoUnifiedTaskOverview",
 		"ParserFirstCallInit": "taskReport",
-		"SMW::Store::BeforeDataUpdateComplete": "SimpleTasks\\Hook\\AddSemanticSubobject::onBeforeDataUpdateComplete",
-		"BlueSpiceEchoConnectorNotifyBeforeSend": "abortMentionNotifications",
-		"EchoAbortEmailNotification": "abortMentionNotifications"
+		"SMW::Store::BeforeDataUpdateComplete": "SimpleTasks\\Hook\\AddSemanticSubobject::onBeforeDataUpdateComplete"
 	},
 	"HookHandlers": {
 		"processTasks": {
@@ -146,10 +144,6 @@
 		},
 		"taskReport": {
 			"class": "SimpleTasks\\Hook\\TaskReport"
-		},
-		"abortMentionNotifications": {
-			"class": "SimpleTasks\\Hook\\AbortMentionNotification",
-			"services": [ "UserFactory", "SimpleTaskManager" ]
 		}
 	},
 	"ServiceWiringFiles": [
