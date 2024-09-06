@@ -2,14 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Cupkake4Yoshi",
-			"Miriam Schlindwein"
+			"Miriam Schlindwein",
+			"TomatoCake"
 		]
 	},
 	"simple-tasks-desc": "Erstelle Aufgaben für Benutzer",
 	"simple-tasks-task-duedate": "Fälligkeitsdatum: $1",
 	"simple-tasks-task-desc": "Aufgabe in Seiteninhalt erstellt",
 	"simple-tasks-notif-key": "Aufgabenzuweisung",
-	"simple-tasks-notif-message": "hat dir eine Aufgabe zugewiesen: \"$1\"",
+	"simple-tasks-notif-message": "{{GENDER:$1|hat}} dir eine Aufgabe {{GENDER:$1|zugewiesen}}: \"$1\"",
 	"simple-tasks-taskreport-no-results": "Keine Aufgaben mit den ausgewählten Filtern gefunden",
 	"simple-tasks-taskreport-header-task": "Aufgabe",
 	"simple-tasks-taskreport-header-assignee": "Beauftragter",
