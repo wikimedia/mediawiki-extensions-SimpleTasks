@@ -36,7 +36,7 @@ class Tasks extends AttentionIndicator {
 	 * @return IAttentionIndicator
 	 */
 	public static function factory( string $key, Config $config, User $user,
-		MediaWikiServices $services, SimpleTaskManager $taskManager = null ) {
+		MediaWikiServices $services, ?SimpleTaskManager $taskManager = null ) {
 		if ( !$taskManager ) {
 			$taskManager = $services->get( 'SimpleTaskManager' );
 		}
