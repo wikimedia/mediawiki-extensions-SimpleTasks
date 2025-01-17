@@ -7,12 +7,12 @@ use DateTime;
 use MediaWiki\Extension\Checklists\ChecklistItem;
 use MediaWiki\Extension\Checklists\ChecklistManager;
 use MediaWiki\Extension\DateTimeTools\DateTimeParser;
+use MediaWiki\Title\Title;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use MWStake\MediaWiki\Component\Events\Notifier;
 use RefreshTasks;
 use SimpleTasks\Event\TaskEvent;
-use Title;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\ILoadBalancer;
 
