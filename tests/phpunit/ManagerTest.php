@@ -7,6 +7,7 @@ use DateTime;
 use MediaWiki\Extension\Checklists\ChecklistItem;
 use MediaWiki\Extension\Checklists\ChecklistManager;
 use MediaWiki\Extension\DateTimeTools\DateTimeParser;
+use MediaWiki\Title\Title;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use MWStake\MediaWiki\Component\Events\Notifier;
@@ -120,7 +121,7 @@ class ManagerTest extends TestCase {
 		$mock->method( 'getText' )->willReturn( $text );
 		$mock->method( 'getValue' )->willReturn( $value );
 		$mock->method( 'getId' )->willReturn( uniqid() );
-		$mock->method( 'getPage' )->willReturn( $this->createMock( \Title::class ) );
+		$mock->method( 'getPage' )->willReturn( $this->createMock( Title::class ) );
 
 		return $mock;
 	}
