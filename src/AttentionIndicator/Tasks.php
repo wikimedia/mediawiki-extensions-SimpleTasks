@@ -5,8 +5,8 @@ namespace SimpleTasks\AttentionIndicator;
 use BlueSpice\Discovery\AttentionIndicator;
 use Config;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\User\User;
 use SimpleTasks\SimpleTaskManager;
-use User;
 
 class Tasks extends AttentionIndicator {
 
