@@ -4,6 +4,7 @@ namespace SimpleTasks\Rest;
 
 use DateTime;
 use Language;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Rest\Handler;
 use MediaWiki\Title\Title;
@@ -11,7 +12,6 @@ use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
 use MWException;
 use RawMessage;
-use RequestContext;
 use SimpleTasks\SimpleTaskManager;
 use TitleFactory;
 use Wikimedia\ParamValidator\ParamValidator;
