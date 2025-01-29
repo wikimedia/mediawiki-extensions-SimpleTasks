@@ -2,9 +2,9 @@
 
 namespace SimpleTasks\Hook;
 
-use FormatJson;
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\Html\Html;
+use MediaWiki\Json\FormatJson;
 use Parser;
 use PPFrame;
 
