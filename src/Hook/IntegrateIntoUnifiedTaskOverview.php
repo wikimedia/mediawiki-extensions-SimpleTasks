@@ -2,8 +2,8 @@
 
 namespace SimpleTasks\Hook;
 
-use Language;
 use MediaWiki\Extension\UnifiedTaskOverview\Hook\GetTaskDescriptors;
+use MediaWiki\Language\Language;
 use MediaWiki\User\User;
 use SimpleTasks\SimpleTaskManager;
 use SimpleTasks\TaskDescriptor;

@@ -2,8 +2,8 @@
 
 namespace SimpleTasks;
 
-use Language;
 use MediaWiki\Extension\UnifiedTaskOverview\ITaskDescriptor;
+use MediaWiki\Language\Language;
 use MediaWiki\Message\Message;
 use RawMessage;
 

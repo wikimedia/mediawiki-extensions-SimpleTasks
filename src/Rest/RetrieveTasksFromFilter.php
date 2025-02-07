@@ -3,8 +3,8 @@
 namespace SimpleTasks\Rest;
 
 use DateTime;
-use Language;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Language\Language;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Rest\Handler;
 use MediaWiki\Title\Title;
