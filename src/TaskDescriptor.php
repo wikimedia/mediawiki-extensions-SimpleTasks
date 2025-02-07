@@ -4,8 +4,8 @@ namespace SimpleTasks;
 
 use MediaWiki\Extension\UnifiedTaskOverview\ITaskDescriptor;
 use MediaWiki\Language\Language;
+use MediaWiki\Language\RawMessage;
 use MediaWiki\Message\Message;
-use RawMessage;
 
 class TaskDescriptor implements ITaskDescriptor {
 
