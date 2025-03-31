@@ -12,5 +12,7 @@
 		"jQuery": "readonly",
 		"OOJSPlus": "readonly"
 	},
-	"rules": {}
+	"rules": {
+		"no-jquery/no-done-fail": "warn"
+	}
 }
