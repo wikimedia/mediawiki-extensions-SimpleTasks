@@ -12,8 +12,9 @@ use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
-use MWException;
+use RuntimeException;
 use SimpleTasks\SimpleTaskManager;
+use UnexpectedValueException;
 use Wikimedia\ParamValidator\ParamValidator;
 
 class RetrieveTasksFromFilter extends Handler {
@@ -242,6 +243,8 @@ class RetrieveTasksFromFilter extends Handler {
 
 	/**
 	 * @return array
+	 * @throws UnexpectedValueException
+	 * @throws RuntimeException
 	 */
 	private function getNamespaces() {
 		$validated = $this->getValidatedParams();
@@ -251,7 +254,7 @@ class RetrieveTasksFromFilter extends Handler {
 
 		$csv = json_decode( $validated['namespace'] );
 		if ( !isset( $csv ) || !is_string( $csv ) ) {
-			throw new MWException(
+			throw new UnexpectedValueException(
 				__CLASS__ . ":" . __METHOD__ . ' - expects comma separated string'
 			);
 		}
@@ -303,7 +306,7 @@ class RetrieveTasksFromFilter extends Handler {
 			foreach ( $invalidNS as $namespace ) {
 
 			}
-			throw new MWException( 'Invalid namespaces: ' . $invalidNS );
+			throw new RuntimeException( 'Invalid namespaces: ' . $invalidNS );
 		}
 
 		// minify the Array, rearrange indexes and return it
