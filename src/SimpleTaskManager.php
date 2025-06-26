@@ -243,7 +243,10 @@ class SimpleTaskManager {
 		$existing = $this->id( $task->getChecklistItem()->getId() )->query();
 		if ( empty( $existing ) ) {
 			$res = $this->insert( $task );
-			$this->notify( $task );
+			if ( !$task->isCompleted() ) {
+				$this->notify( $task );
+			}
+
 			return $res;
 		} else {
 			$res = $this->update( $task, $existing[0] );
