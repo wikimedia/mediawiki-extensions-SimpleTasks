@@ -58,7 +58,9 @@
 		"SimpleTasks": "i18n"
 	},
 	"AutoloadNamespaces": {
-		"SimpleTasks\\": "src/",
+		"SimpleTasks\\": "src/"
+	},
+	"TestAutoloadNamespaces": {
 		"SimpleTasks\\Tests\\": "tests/phpunit/"
 	},
 	"ResourceModules": {
