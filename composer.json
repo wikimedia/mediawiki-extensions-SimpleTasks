@@ -1,15 +1,15 @@
 {
 	"name": "mediawiki/simpletasks",
 	"type": "mediawiki-extension",
+	"description": "Allows users to create simple on-page tasks",
 	"license": "GPL-3.0-only",
 	"authors": [
 		{
 			"name": "Hallo Welt! GmbH",
 			"email": "info@hallowelt.com",
-			"homepage": "http://www.hallowelt.com"
+			"homepage": "https://www.hallowelt.com"
 		}
 	],
-	"description": "Allows users to create simple on-page tasks",
 	"extra": {
 		"installer-name": "SimpleTasks"
 	},
