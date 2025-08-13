@@ -7,6 +7,7 @@ use DateTime;
 use MediaWiki\Extension\Checklists\ChecklistItem;
 use MediaWiki\Extension\Checklists\ChecklistManager;
 use MediaWiki\Extension\DateTimeTools\DateTimeParser;
+use MediaWiki\Language\Language;
 use MediaWiki\Title\Title;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
@@ -48,6 +49,9 @@ class SimpleTaskManager {
 	/** @var array */
 	private $conds = [];
 
+	/** @var Language */
+	private $contentLanguage;
+
 	/**
 	 * @param ILoadBalancer $loadBalancer
 	 * @param ChecklistManager $checklistManager
@@ -55,10 +59,12 @@ class SimpleTaskManager {
 	 * @param MentionParser $mentionParser
 	 * @param DateTimeParser $dateTimeParser
 	 * @param Notifier $notifier
+	 * @param Language $contentLanguage
 	 */
 	public function __construct(
 		ILoadBalancer $loadBalancer, ChecklistManager $checklistManager, UserFactory $userFactory,
-		MentionParser $mentionParser, DateTimeParser $dateTimeParser, Notifier $notifier
+		MentionParser $mentionParser, DateTimeParser $dateTimeParser, Notifier $notifier,
+		Language $contentLanguage
 	) {
 		$this->loadBalancer = $loadBalancer;
 		$this->checklistManager = $checklistManager;
@@ -66,6 +72,7 @@ class SimpleTaskManager {
 		$this->mentionParser = $mentionParser;
 		$this->dateTimeParser = $dateTimeParser;
 		$this->notifier = $notifier;
+		$this->contentLanguage = $contentLanguage;
 	}
 
 	/**
@@ -292,8 +299,17 @@ class SimpleTaskManager {
 	 * @throws \Exception
 	 */
 	private function notify( SimpleTask $task ) {
-		// Notifications
-		$taskNotification = new TaskEvent( $task );
+		$text = $task->getText();
+		$dueDate = $task->getDueDate();
+		if ( $dueDate ) {
+			$dueDate = $this->contentLanguage->userDate( $dueDate->format( 'YmdHis' ), $task->getUser() );
+		}
+		$taskNotification = new TaskEvent(
+			$task->getChecklistItem()->getAuthor(),
+			$task->getChecklistItem()->getPage(),
+			$text,
+			$dueDate
+		);
 		$this->notifier->emit( $taskNotification );
 	}
 
