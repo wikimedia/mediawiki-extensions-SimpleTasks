@@ -19,6 +19,9 @@
 		"NotifyMe": {
 			"Events": {
 				"simple-tasks-task": {
+					"spec": {
+						"class": "SimpleTasks\\Event\\TaskEvent"
+					},
 					"buckets": [ "personal" ]
 				}
 			}
