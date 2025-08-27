@@ -27,5 +27,6 @@
 	"simple-tasks-taskreport-state-title-open": "Task is open",
 	"simple-tasks-taskreport-state-title-done": "Task is done",
 	"simple-tasks-taskreport-state-filter-done": "Done",
-	"simple-tasks-taskreport-state-filter-open": "Open"
+	"simple-tasks-taskreport-state-filter-open": "Open",
+	"simple-tasks-notif-message-with-due-date": "{{GENDER:$1|assigned}} a task to you: \"$1\". Task is due on $2"
 }
