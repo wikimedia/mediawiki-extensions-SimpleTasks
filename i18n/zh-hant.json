@@ -9,6 +9,7 @@
 	"simple-tasks-task-desc": "在頁面內容裡建立的任務",
 	"simple-tasks-notif-key": "任務分配",
 	"simple-tasks-notif-message": "{{GENDER:$1|分配了}}一個任務給您：「$1 」",
+	"simple-tasks-notif-message-with-due-date": "{{GENDER:$1|已分配}}一個任務給您：「$1」。任務截止於 $2",
 	"simple-tasks-taskreport-no-results": "所選定的過濾器找不到任務",
 	"simple-tasks-taskreport-header-task": "任務",
 	"simple-tasks-taskreport-header-assignee": "受託人",
