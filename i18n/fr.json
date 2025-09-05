@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BlueCamille",
+			"Escargot bleu",
 			"MacOS Weed",
 			"Mahabarata"
 		]
@@ -29,5 +30,6 @@
 	"simple-tasks-taskreport-inspector-label-user": "L'affecter à",
 	"simple-tasks-taskreport-inspector-label-namespaces": "Espaces de noms",
 	"simple-tasks-taskreport-inspector-label-due-date": "Date d'échéance",
-	"simple-tasks-taskreport-state-title-open": "La tâche est ouverte"
+	"simple-tasks-taskreport-state-title-open": "La tâche est ouverte",
+	"simple-tasks-notif-message-with-due-date": "{{GENDER:$1|}}vous a assigné une tâche : « $1 ». La tâche est due le $2"
 }
