@@ -9,6 +9,7 @@
 	"simple-tasks-task-desc": "Создадена задача во содржина на страница",
 	"simple-tasks-notif-key": "Задавање на задача",
 	"simple-tasks-notif-message": "ви {{GENDER:$1|зададе}} задача: „$1“",
+	"simple-tasks-notif-message-with-due-date": "{{GENDER:$1|ви зададе}} задача: „$1“. Рокот на задачата е на $2",
 	"simple-tasks-taskreport-no-results": "Не пронајдов задачи со избраните филтри",
 	"simple-tasks-taskreport-header-task": "Задача",
 	"simple-tasks-taskreport-header-assignee": "Зададено на",

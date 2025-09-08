@@ -9,6 +9,7 @@
 	"simple-tasks-task-desc": "Carga create in contento de pagina",
 	"simple-tasks-notif-key": "Assignation de carga",
 	"simple-tasks-notif-message": "{{GENDER:$1|te ha assignate}} un carga: “$1”",
+	"simple-tasks-notif-message-with-due-date": "te {{GENDER:$1|ha assignate}} un carga: “$1”. Le carga es debite le $2",
 	"simple-tasks-taskreport-no-results": "Nulle cargas trovate con filtros seligite",
 	"simple-tasks-taskreport-header-task": "Carga",
 	"simple-tasks-taskreport-header-assignee": "Assignato",
