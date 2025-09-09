@@ -9,6 +9,7 @@
 	"simple-tasks-task-desc": "מטלה שנוצרה בתוכן הדף",
 	"simple-tasks-notif-key": "הקצאת מטלה",
 	"simple-tasks-notif-message": "{{GENDER:$1|הקצה|הקצתה}} לך משימה: \"$1\"",
+	"simple-tasks-notif-message-with-due-date": "{{GENDER:$1|הקצה|הקצתה}} לך משימה: \"$1\". מועד המשימה הוא $2",
 	"simple-tasks-taskreport-no-results": "לא נמצאו מטלות עם המסננים שנבחרו",
 	"simple-tasks-taskreport-header-task": "מטלה",
 	"simple-tasks-taskreport-header-assignee": "המבצע המוקצה",
