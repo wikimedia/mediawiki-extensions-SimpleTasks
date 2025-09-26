@@ -84,7 +84,6 @@ class RetrieveTasksFromFilter extends Handler {
 	}
 
 	/**
-	 *
 	 * @param array $rawTasks
 	 * @return array
 	 */
@@ -113,7 +112,6 @@ class RetrieveTasksFromFilter extends Handler {
 	}
 
 	/**
-	 *
 	 * @param Title $title
 	 * @return bool
 	 */
@@ -127,7 +125,6 @@ class RetrieveTasksFromFilter extends Handler {
 	}
 
 	/**
-	 *
 	 * @param array $task
 	 * @return array
 	 */
@@ -139,7 +136,6 @@ class RetrieveTasksFromFilter extends Handler {
 	}
 
 	/**
-	 *
 	 * @param array $task
 	 * @return array
 	 */
@@ -245,7 +241,6 @@ class RetrieveTasksFromFilter extends Handler {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	private function getNamespaces() {
