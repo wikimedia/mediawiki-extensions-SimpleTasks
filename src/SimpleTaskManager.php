@@ -307,6 +307,7 @@ class SimpleTaskManager {
 		$taskNotification = new TaskEvent(
 			$task->getChecklistItem()->getAuthor(),
 			$task->getChecklistItem()->getPage(),
+			$task->getUser(),
 			$text,
 			$dueDate
 		);
