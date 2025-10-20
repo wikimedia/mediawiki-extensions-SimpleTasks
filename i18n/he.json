@@ -27,5 +27,6 @@
 	"simple-tasks-taskreport-state-title-open": "המטלה פתוחה",
 	"simple-tasks-taskreport-state-title-done": "המטלה פתוחה",
 	"simple-tasks-taskreport-state-filter-done": "בוצעה",
-	"simple-tasks-taskreport-state-filter-open": "פתוחה"
+	"simple-tasks-taskreport-state-filter-open": "פתוחה",
+	"simple-tasks-notif-message-with-due-date": "{{GENDER:$1|הקצה|הקצתה}} לך משימה: \"$1\". מועד המשימה הוא $2"
 }

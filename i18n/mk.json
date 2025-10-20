@@ -27,5 +27,6 @@
 	"simple-tasks-taskreport-state-title-open": "Задачата е отворена",
 	"simple-tasks-taskreport-state-title-done": "Задачата е завршена",
 	"simple-tasks-taskreport-state-filter-done": "Готово",
-	"simple-tasks-taskreport-state-filter-open": "Отворена"
+	"simple-tasks-taskreport-state-filter-open": "Отворена",
+	"simple-tasks-notif-message-with-due-date": "{{GENDER:$1|ви зададе}} задача: „$1“. Рокот на задачата е на $2"
 }
