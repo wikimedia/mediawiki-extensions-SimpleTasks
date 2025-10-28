@@ -84,21 +84,21 @@ ext.simpletasks.ui.TaskReportInspector.prototype.createFields = function () {
 
 ext.simpletasks.ui.TaskReportInspector.prototype.setLayouts = function () {
 	this.userLayout = new OO.ui.FieldLayout( this.userMultiSelect, {
-		align: 'right',
+		align: 'top',
 		label: mw.message( 'simple-tasks-taskreport-inspector-label-user' ).text()
 	} );
 	this.namespaceLayout = new OO.ui.FieldLayout( this.namespacesMultiSelect, {
-		align: 'right',
+		align: 'top',
 		label: mw.message( 'simple-tasks-taskreport-inspector-label-namespaces' ).text()
 	} );
 
 	this.dateLayout = new OO.ui.FieldLayout( this.dateInput, {
-		align: 'right',
+		align: 'top',
 		label: mw.message( 'simple-tasks-taskreport-inspector-label-due-date' ).text()
 	} );
 
 	this.stateLayout = new OO.ui.FieldLayout( this.stateInput, {
-		align: 'right',
+		align: 'top',
 		label: mw.message( 'simple-tasks-taskreport-inspector-label-state' ).text()
 	} );
 };
