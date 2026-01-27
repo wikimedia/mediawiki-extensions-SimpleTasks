@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cabal"
+		]
+	},
+	"simple-tasks-desc": "ਵਰਤੋਂਕਾਰਾਂ ਲਈ ਕਾਰਜ ਬਣਾਓ",
+	"simple-tasks-taskreport-header-task": "ਕਾਰਜ",
+	"simple-tasks-taskreport-inspector-state-open": "ਖੁੱਲ੍ਹਾ/ਖੋਲ੍ਹੋ",
+	"simple-tasks-taskreport-inspector-label-namespaces": "ਨਾਂ-ਥਾਂ",
+	"simple-tasks-taskreport-state-filter-done": "ਪੂਰਾ ਹੋਇਆ",
+	"simple-tasks-taskreport-state-filter-open": "ਖੁੱਲ੍ਹਾ/ਖੋਲ੍ਹੋ"
+}
