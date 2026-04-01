@@ -7,6 +7,7 @@ use DateTime;
 use MediaWiki\Extension\Checklists\ChecklistItem;
 use MediaWiki\Extension\Checklists\ChecklistManager;
 use MediaWiki\Extension\DateTimeTools\DateTimeParser;
+use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Language\Language;
 use MediaWiki\Title\Title;
 use MediaWiki\User\UserFactory;
@@ -35,7 +36,8 @@ class ManagerTest extends TestCase {
 			$this->getMentionParserMock(),
 			$this->getDateTimeParserMock(),
 			$this->createMock( Notifier::class ),
-			$this->createMock( Language::class )
+			$this->createMock( Language::class ),
+			$this->createMock( HookContainer::class )
 		);
 		$task = $manager->processTask( $checklistItem );
 		if ( $expected === null ) {

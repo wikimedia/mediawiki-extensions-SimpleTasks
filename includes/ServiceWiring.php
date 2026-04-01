@@ -12,7 +12,8 @@ return [
 			$services->getService( 'AtMentionsParser' ),
 			$services->getService( 'DateTimeToolParser' ),
 			$services->getService( 'MWStake.Notifier' ),
-			$services->getContentLanguage()
+			$services->getContentLanguage(),
+			$services->getHookContainer()
 		);
 	},
 ];

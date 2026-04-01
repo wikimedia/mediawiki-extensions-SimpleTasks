@@ -7,6 +7,7 @@ use DateTime;
 use MediaWiki\Extension\Checklists\ChecklistItem;
 use MediaWiki\Extension\Checklists\ChecklistManager;
 use MediaWiki\Extension\DateTimeTools\DateTimeParser;
+use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Language\Language;
 use MediaWiki\Title\Title;
 use MediaWiki\User\UserFactory;
@@ -52,6 +53,9 @@ class SimpleTaskManager {
 	/** @var Language */
 	private $contentLanguage;
 
+	/** @var HookContainer */
+	private $hookContainer;
+
 	/**
 	 * @param ILoadBalancer $loadBalancer
 	 * @param ChecklistManager $checklistManager
@@ -60,11 +64,12 @@ class SimpleTaskManager {
 	 * @param DateTimeParser $dateTimeParser
 	 * @param Notifier $notifier
 	 * @param Language $contentLanguage
+	 * @param HookContainer $hookContainer
 	 */
 	public function __construct(
 		ILoadBalancer $loadBalancer, ChecklistManager $checklistManager, UserFactory $userFactory,
 		MentionParser $mentionParser, DateTimeParser $dateTimeParser, Notifier $notifier,
-		Language $contentLanguage
+		Language $contentLanguage, HookContainer $hookContainer
 	) {
 		$this->loadBalancer = $loadBalancer;
 		$this->checklistManager = $checklistManager;
@@ -73,6 +78,7 @@ class SimpleTaskManager {
 		$this->dateTimeParser = $dateTimeParser;
 		$this->notifier = $notifier;
 		$this->contentLanguage = $contentLanguage;
+		$this->hookContainer = $hookContainer;
 	}
 
 	/**
@@ -246,21 +252,23 @@ class SimpleTaskManager {
 		if ( !$this->isInitialized() ) {
 			return true;
 		}
+
 		$existing = $this->id( $task->getChecklistItem()->getId() )->query();
 		if ( empty( $existing ) ) {
 			$res = $this->insert( $task );
 			if ( !$task->isCompleted() ) {
 				$this->notify( $task );
 			}
-
-			return $res;
 		} else {
 			$res = $this->update( $task, $existing[0] );
 			if ( $this->isAssigneeChanged( $task, $existing[0] ) ) {
 				$this->notify( $task );
 			}
-			return $res;
 		}
+
+		$this->fireTaskUpdateHook( $task, $this->contentLanguage );
+
+		return $res;
 	}
 
 	/**
@@ -332,7 +340,7 @@ class SimpleTaskManager {
 	private function update( SimpleTask $new, SimpleTask $old ): bool {
 		if ( $old->getUser()->getId() !== $new->getUser()->getId() ) {
 			// Asssignee changed
-			$this->delete( $old->getChecklistItem()->getId() );
+			$this->delete( $old->getChecklistItem() );
 			return $this->insert( $new );
 		}
 		$dbw = $this->loadBalancer->getConnection( DB_PRIMARY );
@@ -369,18 +377,22 @@ class SimpleTaskManager {
 	}
 
 	/**
-	 * @param string $id
+	 * @param ChecklistItem $item
 	 *
 	 * @return bool
 	 */
-	public function delete( string $id ): bool {
+	public function delete( ChecklistItem $item ): bool {
 		if ( !$this->isInitialized() ) {
 			return true;
+		}
+		$task = $this->processTask( $item );
+		if ( $task ) {
+			$this->fireTaskUpdateHook( $task, $this->contentLanguage, true );
 		}
 		$dbw = $this->loadBalancer->getConnection( DB_PRIMARY );
 		return $dbw->delete(
 			'simple_tasks',
-			[ 'st_check_id' => $id ],
+			[ 'st_check_id' => $item->getId() ],
 			__METHOD__
 		);
 	}
@@ -442,4 +454,26 @@ class SimpleTaskManager {
 	private function isInitialized(): bool {
 		return !defined( 'MEDIAWIKI_INSTALL' ) && !defined( 'MW_UPDATER' );
 	}
+
+	/**
+	 * @param SimpleTask $task
+	 * @param Language $contentLanguage
+	 */
+	private function fireTaskUpdateHook(
+		SimpleTask $task,
+		Language $contentLanguage,
+		?bool $isCompleted = null
+	): void {
+		$descriptor = new SimpleTasksTaskDescriptor(
+			$task,
+			$contentLanguage
+		);
+		$user = $this->userFactory->newFromUserIdentity( $task->getUser() );
+
+		$this->hookContainer->run(
+			'SimpleTasksUpdateTask',
+			[ $descriptor, $user, $isCompleted ?? $task->isCompleted() ]
+		);
+	}
+
 }
