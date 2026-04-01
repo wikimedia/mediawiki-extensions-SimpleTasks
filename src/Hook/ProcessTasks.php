@@ -37,7 +37,7 @@ class ProcessTasks implements
 	 */
 	public function onChecklistsItemsDeleted( array $items, ChecklistManager $checklistManager ) {
 		foreach ( $items as $checkbox ) {
-			$this->taskManager->delete( $checkbox->getId() );
+			$this->taskManager->delete( $checkbox );
 		}
 	}
 

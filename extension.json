@@ -34,7 +34,10 @@
 		"UnifiedTaskOverview": {
 			"AttentionIndicatorCollectionRegistry": [
 				"tasks"
-			]
+			],
+			"TaskDescriptorRegistry": {
+				"simple-tasks-task": "\\SimpleTasks\\SimpleTasksTaskDescriptor"
+			}
 		},
 		"VisualEditor": {
 			"PluginModules": [
@@ -129,21 +132,20 @@
 		"ChecklistsItemsUpdated": "processTasks",
 		"ChecklistsItemsDeleted": "processTasks",
 		"LoadExtensionSchemaUpdates": "runDatabaseUpdates",
-		"UnifiedTaskOverviewGetTaskDescriptors": "integrateIntoUnifiedTaskOverview",
 		"ParserFirstCallInit": "taskReport",
-		"SMW::Store::BeforeDataUpdateComplete": "SimpleTasks\\Hook\\AddSemanticSubobject::onBeforeDataUpdateComplete"
+		"SMW::Store::BeforeDataUpdateComplete": "SimpleTasks\\Hook\\AddSemanticSubobject::onBeforeDataUpdateComplete",
+		"SimpleTasksUpdateTask": "updateUnifiedTaskOverview"
 	},
 	"HookHandlers": {
 		"processTasks": {
 			"class": "SimpleTasks\\Hook\\ProcessTasks",
 			"services": [ "SimpleTaskManager" ]
 		},
+		"updateUnifiedTaskOverview": {
+			"class": "SimpleTasks\\Hook\\UpdateUnifiedTaskOverview"
+		},
 		"runDatabaseUpdates": {
 			"class": "SimpleTasks\\Hook\\RunDatabaseUpdates"
-		},
-		"integrateIntoUnifiedTaskOverview": {
-			"class": "SimpleTasks\\Hook\\IntegrateIntoUnifiedTaskOverview",
-			"services": [ "SimpleTaskManager", "ContentLanguage" ]
 		},
 		"taskReport": {
 			"class": "SimpleTasks\\Hook\\TaskReport"
