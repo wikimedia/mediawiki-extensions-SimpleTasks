@@ -1,16 +1,19 @@
 {
 	"root": true,
 	"extends": [
-		"wikimedia/client-es6",
+		"wikimedia/client",
 		"wikimedia/jquery",
 		"wikimedia/mediawiki"
 	],
+	"parserOptions": {
+		"sourceType": "commonjs"
+	},
 	"globals": {
 		"ext": "readonly",
-		"ve": "readonly",
 		"mediaWiki": "readonly",
+		"OOJSPlus": "readonly",
 		"jQuery": "readonly",
-		"OOJSPlus": "readonly"
+		"ve": "readonly"
 	},
 	"rules": {}
 }
