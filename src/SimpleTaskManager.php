@@ -176,7 +176,6 @@ class SimpleTaskManager {
 	}
 
 	/**
-	 *
 	 * @param IDatabase $db
 	 * @return void
 	 */

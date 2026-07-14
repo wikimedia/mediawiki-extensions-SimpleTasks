@@ -17,9 +17,6 @@ class TaskReport implements ParserFirstCallInitHook {
 	 */
 	private static $counter = [];
 
-	/**
-	 *
-	 */
 	public function __construct() {
 	}
 
