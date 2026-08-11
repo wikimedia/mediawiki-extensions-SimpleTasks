@@ -134,9 +134,9 @@
 		"ChecklistsItemsUpdated": "processTasks",
 		"ChecklistsItemsDeleted": "processTasks",
 		"LoadExtensionSchemaUpdates": "runDatabaseUpdates",
-		"ParserFirstCallInit": "taskReport",
 		"SMW::Store::BeforeDataUpdateComplete": "SimpleTasks\\Hook\\AddSemanticSubobject::onBeforeDataUpdateComplete",
-		"SimpleTasksUpdateTask": "updateUnifiedTaskOverview"
+		"SimpleTasksUpdateTask": "updateUnifiedTaskOverview",
+		"MWStakeGenericTagHandlerInitTags": "addTag"
 	},
 	"HookHandlers": {
 		"processTasks": {
@@ -149,8 +149,8 @@
 		"runDatabaseUpdates": {
 			"class": "SimpleTasks\\Hook\\RunDatabaseUpdates"
 		},
-		"taskReport": {
-			"class": "SimpleTasks\\Hook\\TaskReport"
+		"addTag": {
+			"class": "SimpleTasks\\Hook\\AddTag"
 		}
 	},
 	"ServiceWiringFiles": [
