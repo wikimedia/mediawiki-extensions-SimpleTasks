@@ -5,46 +5,22 @@ namespace SimpleTasks;
 use MediaWiki\Extension\UnifiedTaskOverview\ITaskDescriptor;
 use MediaWiki\Language\Language;
 use MediaWiki\Language\RawMessage;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MediaWiki\Title\Title;
-use stdClass;
+use MediaWiki\Title\TitleFactory;
 
 class SimpleTasksTaskDescriptor implements ITaskDescriptor {
-
-	/** @var SimpleTask */
-	protected $task;
-	/** @var Language */
-	private $language;
 
 	/**
 	 * @param SimpleTask $task
 	 * @param Language $language
+	 * @param TitleFactory $titleFactory
 	 */
-	public function __construct( SimpleTask $task, Language $language ) {
-		$this->task = $task;
-		$this->language = $language;
-	}
-
-	/**
-	 * @param stdClass $row
-	 * @return static|null
-	 */
-	public static function newFromTaskRow( stdClass $row ): ?static {
-		$services = MediaWikiServices::getInstance();
-		/** @var SimpleTaskManager */
-		$simpleTaskManager = $services->getService( 'SimpleTaskManager' );
-		$simpleTaskManager = $simpleTaskManager->id( $row->uto_key );
-		/** @var SimpleTask[] $tasks */
-		$tasks = $simpleTaskManager->query();
-		if ( !$tasks ) {
-			return null;
-		}
-
-		return new static(
-			$tasks[0],
-			$services->getContentLanguage()
-		);
+	public function __construct(
+		private readonly SimpleTask $task,
+		private readonly Language $language,
+		private readonly TitleFactory $titleFactory
+	) {
 	}
 
 	/**
@@ -59,7 +35,7 @@ class SimpleTasksTaskDescriptor implements ITaskDescriptor {
 	 */
 	public function getTitle(): Title {
 		$pageIdentity = $this->task->getChecklistItem()->getPage();
-		return MediaWikiServices::getInstance()->getTitleFactory()->newFromPageIdentity( $pageIdentity );
+		return $this->titleFactory->castFromPageIdentity( $pageIdentity );
 	}
 
 	/**
@@ -73,7 +49,7 @@ class SimpleTasksTaskDescriptor implements ITaskDescriptor {
 	 * @return string
 	 */
 	public function getURL(): string {
-		return $this->task->getChecklistItem()->getPage()->getLocalURL();
+		return $this->getTitle()->getFullURL();
 	}
 
 	/**

@@ -4,6 +4,7 @@ namespace SimpleTasks;
 
 use AtMentions\MentionParser;
 use DateTime;
+use Exception;
 use MediaWiki\Extension\Checklists\ChecklistItem;
 use MediaWiki\Extension\Checklists\ChecklistManager;
 use MediaWiki\Extension\DateTimeTools\DateTimeParser;
@@ -247,6 +248,7 @@ class SimpleTaskManager {
 	 * @param SimpleTask $task
 	 *
 	 * @return bool
+	 * @throws Exception
 	 */
 	public function persist( SimpleTask $task ): bool {
 		if ( !$this->isInitialized() ) {
@@ -266,7 +268,7 @@ class SimpleTaskManager {
 			}
 		}
 
-		$this->fireTaskUpdateHook( $task, $this->contentLanguage );
+		$this->hookContainer->run( 'SimpleTasksPersistTask', [ $task ] );
 
 		return $res;
 	}
@@ -275,6 +277,7 @@ class SimpleTaskManager {
 	 * @param RefreshTasks|null $maintenance
 	 *
 	 * @return void
+	 * @throws Exception
 	 */
 	public function refreshAll( ?RefreshTasks $maintenance ) {
 		if ( !$this->isInitialized() ) {
@@ -303,7 +306,7 @@ class SimpleTaskManager {
 	/**
 	 * @param SimpleTask $task
 	 *
-	 * @throws \Exception
+	 * @throws Exception
 	 */
 	private function notify( SimpleTask $task ) {
 		$text = $task->getText();
@@ -386,15 +389,16 @@ class SimpleTaskManager {
 			return true;
 		}
 		$task = $this->processTask( $item );
-		if ( $task ) {
-			$this->fireTaskUpdateHook( $task, $this->contentLanguage, true );
-		}
 		$dbw = $this->loadBalancer->getConnection( DB_PRIMARY );
-		return $dbw->delete(
+		$res = $dbw->delete(
 			'simple_tasks',
 			[ 'st_check_id' => $item->getId() ],
 			__METHOD__
 		);
+
+		if ( $res ) {
+			$this->hookContainer->run( 'SimpleTasksDeleteTask', [ $task ] );
+		}
 	}
 
 	/**
@@ -454,26 +458,4 @@ class SimpleTaskManager {
 	private function isInitialized(): bool {
 		return !defined( 'MEDIAWIKI_INSTALL' ) && !defined( 'MW_UPDATER' );
 	}
-
-	/**
-	 * @param SimpleTask $task
-	 * @param Language $contentLanguage
-	 */
-	private function fireTaskUpdateHook(
-		SimpleTask $task,
-		Language $contentLanguage,
-		?bool $isCompleted = null
-	): void {
-		$descriptor = new SimpleTasksTaskDescriptor(
-			$task,
-			$contentLanguage
-		);
-		$user = $this->userFactory->newFromUserIdentity( $task->getUser() );
-
-		$this->hookContainer->run(
-			'SimpleTasksUpdateTask',
-			[ $descriptor, $user, $isCompleted ?? $task->isCompleted() ]
-		);
-	}
-
 }

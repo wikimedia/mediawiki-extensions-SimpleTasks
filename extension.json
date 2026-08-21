@@ -133,7 +133,8 @@
 		"ChecklistsItemsDeleted": "processTasks",
 		"LoadExtensionSchemaUpdates": "runDatabaseUpdates",
 		"SMW::Store::BeforeDataUpdateComplete": "SimpleTasks\\Hook\\AddSemanticSubobject::onBeforeDataUpdateComplete",
-		"SimpleTasksUpdateTask": "updateUnifiedTaskOverview",
+		"SimpleTasksPersistTask": "updateUnifiedTaskOverview",
+		"SimpleTasksDeleteTask": "updateUnifiedTaskOverview",
 		"MWStakeGenericTagHandlerInitTags": "addTag"
 	},
 	"HookHandlers": {
@@ -142,7 +143,8 @@
 			"services": [ "SimpleTaskManager" ]
 		},
 		"updateUnifiedTaskOverview": {
-			"class": "SimpleTasks\\Hook\\UpdateUnifiedTaskOverview"
+			"class": "SimpleTasks\\Hook\\UpdateUnifiedTaskOverview",
+			"services": [ "ContentLanguage", "TitleFactory" ]
 		},
 		"runDatabaseUpdates": {
 			"class": "SimpleTasks\\Hook\\RunDatabaseUpdates"
