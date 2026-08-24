@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"simple-tasks-desc": "کارنانو لپاره ساده کاردندې",
+	"simple-tasks-task-duedate": "پای نېټه: $1",
+	"simple-tasks-task-desc": "په مخ منځپانگه کې کاردنده جوړه شوه",
+	"simple-tasks-notif-key": "د کاردندې ټاکل",
+	"simple-tasks-notif-message": "{{GENDER:$1|تاسو}} ته يوه کاردنده سپارل شوې ده: \"$1\"",
+	"simple-tasks-notif-message-with-due-date": "{{GENDER:$1|تاسو}} ته يوه کاردنده سپارل شوې ده: \"$1\". کاردنده په $2 پای ته رسېږي.",
+	"simple-tasks-taskreport-no-results": "ټاکلي چاڼونو سره هېڅ کاردندې ونه موندل شوې",
+	"simple-tasks-taskreport-header-task": "کاردنده",
+	"simple-tasks-taskreport-header-assignee": "گومارل‌شوی",
+	"simple-tasks-taskreport-header-page": "مخ کې ښکاري",
+	"simple-tasks-taskreport-header-due-to": "پای نېټه",
+	"simple-tasks-taskreport-header-state": "دريځ",
+	"simple-tasks-droplet-taskreport-name": "کاردندې راپور",
+	"simple-tasks-droplet-taskreport-description": "د کاردندو ټول‌کتنه جوړوي",
+	"simple-tasks-taskreport-inspector-title": "کاردندې راپور",
+	"simple-tasks-taskreport-inspector-state-done": "وشو",
+	"simple-tasks-taskreport-inspector-state-open": "پرانېستل",
+	"simple-tasks-taskreport-inspector-label-user": "گومارل‌شوي",
+	"simple-tasks-taskreport-inspector-label-namespaces": "نوم‌تشيالونه",
+	"simple-tasks-taskreport-inspector-label-due-date": "تر هغې چې پای ته ورسېږي",
+	"simple-tasks-taskreport-inspector-label-state": "دريځ",
+	"simple-tasks-taskreport-state-title-open": "کاردنده پرانېستې ده",
+	"simple-tasks-taskreport-state-title-done": "کاردنده وشوه",
+	"simple-tasks-taskreport-state-filter-done": "وشو",
+	"simple-tasks-taskreport-state-filter-open": "پرانېستل"
+}
