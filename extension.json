@@ -26,15 +26,7 @@
 				}
 			}
 		},
-		"BlueSpiceDiscovery": {
-			"AttentionIndicatorRegistry": {
-				"tasks": "\\SimpleTasks\\AttentionIndicator\\Tasks::factory"
-			}
-		},
 		"UnifiedTaskOverview": {
-			"AttentionIndicatorCollectionRegistry": [
-				"tasks"
-			],
 			"TaskDescriptorRegistry": {
 				"simple-tasks-task": "\\SimpleTasks\\SimpleTasksTaskDescriptor"
 			}
