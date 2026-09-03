@@ -399,6 +399,8 @@ class SimpleTaskManager {
 		if ( $res ) {
 			$this->hookContainer->run( 'SimpleTasksDeleteTask', [ $task ] );
 		}
+
+		return $res;
 	}
 
 	/**
