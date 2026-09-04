@@ -31,18 +31,6 @@
 				"simple-tasks-task": "\\SimpleTasks\\SimpleTasksTaskDescriptor"
 			}
 		},
-		"VisualEditor": {
-			"PluginModules": [
-				"ext.simpletasks.taskreport.nodes"
-			]
-		},
-		"ContentDroplets": {
-			"Droplets": {
-				"taskreport": {
-					"class": "SimpleTasks\\ContentDroplets\\TaskReportDroplet"
-				}
-			}
-		},
 		"MWStakeContentProvisioner": {
 			"ContentManifests": {
 				"DefaultContentProvisioner": [
