@@ -40,7 +40,7 @@ class TaskReportTag extends GenericTag {
 			'user' => ( new StringValue() )->setDefaultValue( '' ),
 			'date' => ( new StringValue() )->setDefaultValue( '' ),
 			'status' => ( new StringValue() )->setDefaultValue( '' ),
-			'namespace' => ( new StringValue() )->setDefaultValue( '' ),
+			'namespaces' => ( new StringValue() )->setDefaultValue( '' ),
 		];
 	}
 
