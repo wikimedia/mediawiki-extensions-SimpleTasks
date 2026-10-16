@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"AhmedG612"
+		]
+	},
+	"simple-tasks-desc": "Abuur hawlo isticmaalayaasha",
+	"simple-tasks-task-duedate": "Taariikhda kama dambaysta ah: $1",
+	"simple-tasks-task-desc": "Hawl ayaa lagu abuuray nuxurka bogga",
+	"simple-tasks-notif-key": "U qoondeynta hawsha",
+	"simple-tasks-notif-message": "{{GENDER:$1|waxay kuu qoondeeyeen}} hawl: \"$1\"",
+	"simple-tasks-notif-message-with-due-date": "{{GENDER:$1|waxay kuu qoondeeyeen}} hawl: \"$1\". Hawshu waxay ku egtahay $2",
+	"simple-tasks-taskreport-no-results": "Lama helin hawlo leh shaandheeyayaasha la doortay",
+	"simple-tasks-taskreport-header-task": "Hawsha",
+	"simple-tasks-taskreport-header-assignee": "Qofka loo qoondeeyey",
+	"simple-tasks-taskreport-header-page": "Waxay ka muuqataa bogga",
+	"simple-tasks-taskreport-header-due-to": "Taariikhda kama dambaysta ah",
+	"simple-tasks-taskreport-header-state": "Xaalada",
+	"simple-tasks-droplet-taskreport-name": "Warbixinta hawsha",
+	"simple-tasks-droplet-taskreport-description": "Waxay abuurtaa dulmar ku saabsan hawlaha",
+	"simple-tasks-taskreport-inspector-title": "Warbixinta Hawsha",
+	"simple-tasks-taskreport-inspector-state-done": "La dhammeeyay",
+	"simple-tasks-taskreport-inspector-state-open": "Fur",
+	"simple-tasks-taskreport-inspector-label-user": "Qofka loo qoondeeyey",
+	"simple-tasks-taskreport-inspector-label-namespaces": "Meel magacyada",
+	"simple-tasks-taskreport-inspector-label-due-date": "Ilaa taariikhda kama dambaysta ah",
+	"simple-tasks-taskreport-inspector-label-state": "Xaalada",
+	"simple-tasks-taskreport-state-title-open": "Hawshu way furan tahay",
+	"simple-tasks-taskreport-state-title-done": "Hawshu way dhammaatay",
+	"simple-tasks-taskreport-state-filter-done": "La dhammeeyay",
+	"simple-tasks-taskreport-state-filter-open": "Furan"
+}
