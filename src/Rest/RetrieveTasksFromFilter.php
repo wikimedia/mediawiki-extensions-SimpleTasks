@@ -131,6 +131,9 @@ class RetrieveTasksFromFilter extends Handler {
 	 */
 	private function setDateData( $task ) {
 		$date = $task['dueDate'];
+		if ( !$date ) {
+			return $task;
+		}
 		$dateFormatted = $this->userlanguage->userDate( $date, $this->currentUser );
 		$task['dueDate'] = $dateFormatted;
 		return $task;
